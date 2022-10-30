@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import PartList from "./components/PartList";
+import Avatar from "./components/Avatar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="title">CHARACTER</div>
+      <div className="subtitle">🛠️CUSTOMIZATION🛠️</div>
+      <div className="divider"></div>
+      <div className="avatar-group gap-30">
+        <Avatar />
+        <PartList partListName="Body" partListURL="character/body" />
+      </div>
     </div>
   );
 }
