@@ -1,16 +1,14 @@
 import React from "react";
 
-function PartItems({ partItemId, partItemURL }) {
-  const imgURL = `${partItemURL}/${partItemId}.png`;
-
+function PartItems({ partItemId, partItemURL, handleClick }) {
   return (
     <div>
-      <div className="clickable square">
+      <div className="clickable square" onClick={handleClick}>
         <img
-          src={imgURL}
+          src={`${partItemURL}/${partItemId}.png`}
           alt=""
           height="60"
-          class="img-center"
+          className="img-center"
           style={{ top: "50%" }}
         />
       </div>
